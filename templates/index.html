@@ -4,5 +4,40 @@
   {{ super() }}
 {% endblock %}
 {% block content %}
-    <h1>Wellocme</h1>
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">Greetings</span>
+                <span class="down">I am YuryLobkov</span>
+            </h1>
+            <p class="header-subtitle">FULL STACK DEVELOPER</p>            
+
+            <button class="btn btn-primary">Visit My Works</button>
+        </div>              
+    </header><!-- end of page header -->
+
+    <!-- about section -->
+    <section class="" id="about">
+        <!-- container -->
+        <div class="container">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img">
+                    <img src="./static/assets/imgs/ava.png" class="about-img" alt="avatar">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Who Am I ?</p>
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p>
+                        I am full stack web developer with high potential. I`m focusing on building high quality web apps within short amount of time.
+                        <br>
+                        Now my stack includes: Python Django Flask HTML5 CSS JS React.js
+                    </p>
+                    <button class="btn btn-outline-primary mt-4">Download CV</button>
+                </div>              
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
 {% endblock %}
