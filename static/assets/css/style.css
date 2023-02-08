@@ -252,7 +252,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     border-radius: 0px;
 }
 
-html, body {
+body {
     overflow-x: hidden;
 }
 
