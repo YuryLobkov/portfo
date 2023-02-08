@@ -1,5 +1,7 @@
-from flask import Flask, render_template, send_from_directory, request, redirect
+from flask import Flask, render_template, send_from_directory, request, redirect, send_file
 import csv
+import os
+from pathlib import Path
 
 app = Flask(__name__)
 
@@ -23,6 +25,12 @@ def submit_form():
             return 'cannot save to database'
     else:
     	return 'something went wrong'
+    
+
+@app.route('/download_cv')
+def dowloadCv ():
+    path =  os.path.join(Path(__file__).resolve().parent.parent, 'portfo','media', 'Resume-Yury-Lobkov.pdf')
+    return send_file(path, as_attachment=True)
 
 
 def store_contacts(data_input):
