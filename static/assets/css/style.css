@@ -34,7 +34,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
+  color: #ffffff9a;
   background-color: rgba(0, 0, 0, 0.01);
   background-clip: padding-box;
   border: 1px solid #ced4da;
@@ -44,7 +44,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 .form-control:focus {
-  color: #495057;
+  color: #ffffff;
   background-color: rgba(0, 0, 0, 0.01);
   border-color: #b4add3;
   outline: 0;
