@@ -1,5 +1,7 @@
-from flask import Flask, render_template, send_from_directory, request, redirect
+from flask import Flask, render_template, send_from_directory, request, redirect, send_file
 import csv
+import os
+from pathlib import Path
 
 app = Flask(__name__)
 
@@ -9,7 +11,10 @@ def my_home():
 
 @app.route("/<string:page_name>")
 def html_page(page_name):
-    return render_template(page_name)
+    try:
+        return render_template(page_name)
+    except:
+        return render_template('/404.html')
 
 @app.route('/submit_form', methods=['POST', 'GET'])
 def submit_form():
@@ -23,6 +28,15 @@ def submit_form():
             return 'cannot save to database'
     else:
     	return 'something went wrong'
+    
+
+@app.route('/download_cv')
+def dowloadCv ():
+    path =  os.path.join(Path(__file__).resolve().parent.parent, 'portfo','media', 'Resume-Yury-Lobkov.pdf')
+    try:
+        return send_file(path, as_attachment=True)
+    except:
+        return render_template('/404.html')
 
 
 def store_contacts(data_input):
