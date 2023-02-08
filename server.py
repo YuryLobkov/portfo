@@ -29,8 +29,11 @@ def submit_form():
 
 @app.route('/download_cv')
 def dowloadCv ():
-    path =  os.path.join(Path(__file__).resolve().parent.parent, 'portfo','media', 'Resume-Yury-Lobkov.pdf')
-    return send_file(path, as_attachment=True)
+    path =  os.path.join(Path(__file__).resolve().parent.parent, 'portfoo','media', 'Resume-Yury-Lobkov.pdf')
+    try:
+        return send_file(path, as_attachment=True)
+    except:
+        return render_template('/404.html')
 
 
 def store_contacts(data_input):
