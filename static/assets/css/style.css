@@ -7,6 +7,16 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
+.navbar-brand {
+    font-family: 'Audiowide', cursive;
+}
+
+.navbar-brand:hover{
+    scale: 110%;
+    color: rgba(216, 225, 255, 0.829)
+}
+
+
 .navbar-toggler,
 .navbar-toggler:focus,
 .navbar-toggler:active,
