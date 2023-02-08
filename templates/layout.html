@@ -45,9 +45,27 @@
         </div>
     </nav>
     <div id="content">{% block content %}{% endblock %}</div>
-    <div id="footer" class="fixed-bottom">
+    <div id="footer" class="">
         {% block footer %}
-        &copy; Copyright 2023 by YuryLobkov.
+            <div class="container">
+                <hr>
+                <footer class="footer mb-2 d-flex flex-row-reverse">       
+                    <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://yurylobkov.pythonanywhere.com/">YuryLobkov</a></p>
+                    <div class="social-links text-right m-0 ml-sm-auto row">
+                        <a class="socials m-3 col-1" href="https://github.com/YuryLobkov">
+                            <img src="./static/assets/imgs/logos/githublogo.png" alt="github" height="40" width="40">
+                        </a>
+                        <a class="socials m-3 col-1" href="https://www.linkedin.com/in/lobkov-yk/">
+                            <img src="./static/assets/imgs/logos/linkedinlogo.png" alt="linkedin" height="40" width="40">
+                        </a>
+                        <a class="socials m-3 col-1" href="mailto:yu.lobkov@gmail.com">
+                            <img src="./static/assets/imgs/logos/mail.png" alt="gmail" height="40" width="40">
+                        </a>                        
+                        
+                        
+                    </div>
+                </footer>
+            </div>
         {% endblock %}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
