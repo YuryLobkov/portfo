@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/static/assets/imgs/logos/favicon.ico">
+    <title>Yury Lobkov - Web developer portfolio</title>
+    {% endblock %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Offcanvas navbar large">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">YL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About me</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            My works
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#portfolio">All works</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="http://raccoonenot.pythonanywhere.com/">CookTail</a></li>
+                                <li><a class="dropdown-item" href="https://t.me/TengePeso_bot">Telegram currency bot</a></li>
+                                <li><a class="dropdown-item" href="#portfolio">Upcoming project...</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact me</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer" class="">
+        {% block footer %}
+            <div class="container">
+                <hr>
+                <footer class="footer mb-2 d-flex flex-row-reverse">       
+                    <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://yurylobkov.pythonanywhere.com/">YuryLobkov</a></p>
+                    <div class="social-links text-right m-0 ml-sm-auto row">
+                        <a class="socials m-3 col-1" href="https://github.com/YuryLobkov">
+                            <img src="./static/assets/imgs/logos/githublogo.png" alt="github" height="40" width="40">
+                        </a>
+                        <a class="socials m-3 col-1" href="https://www.linkedin.com/in/lobkov-yk/">
+                            <img src="./static/assets/imgs/logos/linkedinlogo.png" alt="linkedin" height="40" width="40">
+                        </a>
+                        <a class="socials m-3 col-1" href="mailto:yu.lobkov@gmail.com">
+                            <img src="./static/assets/imgs/logos/mail.png" alt="gmail" height="40" width="40">
+                        </a>                        
+                        
+                        
+                    </div>
+                </footer>
+            </div>
+        {% endblock %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
