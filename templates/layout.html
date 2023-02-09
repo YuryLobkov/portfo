@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> -->
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <title>Yury Lobkov - Web developer portfolio</title>
     {% endblock %}
@@ -16,11 +17,11 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Offcanvas navbar large">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#home">YL</a>
+            <a class="navbar-brand" href="/">YL</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+            <div class="offcanvas offcanvas-end w-50 text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menu</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -37,14 +38,14 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             My works
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#portfolio">All works</a></li>
+                            <ul class="dropdown-menu text-bg-dark">
+                                <li><a class="dropdown-item text-bg-dark" href="#portfolio">All works</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="http://raccoonenot.pythonanywhere.com/">CookTail</a></li>
-                                <li><a class="dropdown-item" href="https://t.me/TengePeso_bot">Telegram currency bot</a></li>
-                                <li><a class="dropdown-item" href="#portfolio">Upcoming project...</a></li>
+                                <li><a class="dropdown-item text-bg-dark" href="http://raccoonenot.pythonanywhere.com/">CookTail</a></li>
+                                <li><a class="dropdown-item text-bg-dark" href="https://t.me/TengePeso_bot">Telegram currency bot</a></li>
+                                <li><a class="dropdown-item text-bg-dark" href="#portfolio">Upcoming project...</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -80,5 +81,6 @@
         {% endblock %}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- <script src='static/script.js' type="text/javascript"></script> --> 
 </body>
 </html>
